@@ -30,8 +30,6 @@ deploy:
   needs:
     - job: build_assets
       artifacts: true
-    - job: build_vendors
-      artifacts: true
   image: node:13.5.0
   before_script:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
