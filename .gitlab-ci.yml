@@ -60,11 +60,14 @@ deploy:
     - echo "Uploading build artifacts"
     - scp -P22 -r package.json $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE
     - scp -P22 -r yarn.lock $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE
+    - scp -P22 -r composer.json $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE
+    - scp -P22 -r composer.lock $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE
+    - scp -P22 -r symfony.lock $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE
     - scp -P22 -r public/* $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE/public
     - scp -P22 -r src/* $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE/src
     - scp -P22 -r bin/* $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE/bin
     - scp -P22 -r config/* $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE/config
     - scp -P22 -r templates/* $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE/templates
-    - scp -P22 -r vendor/* $PROD_USER@$PROD_HOST:$CI_PROJECT_TITLE/vendor
+    - ssh -p22 $STAGING_USER@$STAGING_HOST "cd $CI_PROJECT_TITLE && composer install"
     - ssh -p22 $STAGING_USER@$STAGING_HOST "cd $CI_PROJECT_TITLE && yarn install"
     - ssh -p22 $STAGING_USER@$STAGING_HOST "cd $CI_PROJECT_TITLE && bin/console cache:clear --env=prod"
