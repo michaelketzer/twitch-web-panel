@@ -10,7 +10,7 @@ stages:
 
 build_assets:
   stage: build
-  image: node:13.1.0
+  image: node:13.5.0
   before_script:
     - yarn config set cache-folder .yarn
     - yarn install
