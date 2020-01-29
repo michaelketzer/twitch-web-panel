@@ -43,5 +43,11 @@
         "twitch-api-v5": "^2.0.4",
         "twitch-bot": "^1.3.5",
         "ws": "^7.1.2"
-    }
+    },
+    "name": "panel",
+    "version": "1.0.0",
+    "description": "Webpanel for stream-tools",
+    "main": "index.js",
+    "repository": "git@gitlab.com:shokz.tv/stream-tools/panel.git",
+    "author": "GriefCode"
 }
