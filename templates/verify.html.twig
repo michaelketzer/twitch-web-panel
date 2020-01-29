@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shokz.tv provably fair winner!{% endblock %}
+
+{% block body %}
+    {{ react_component('Verify', {rendering: 'client_side'}) }}
+{% endblock %}

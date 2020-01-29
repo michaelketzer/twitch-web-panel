@@ -1,0 +1,73 @@
+.socialWrapper {
+    background: url('./bg.png');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialContent {
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.wd {
+    width: 250px;
+    height: 295px;
+    background: url('./wd.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.other {
+    width: 305px;
+    display: flex;
+    flex-direction: column;
+    height: 100%
+}
+
+@media only screen and (max-width:555px) {
+    .wd {
+        width: 100%;
+    }
+    .other {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.logo {
+    background: url('./logo.png');
+    background-size: contain;
+    height: 140px;
+    margin-left: 20px;
+    background-repeat: no-repeat;
+}
+
+.row {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.row.twitter {
+    background: url('./twitter.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.row.insta {
+    background: url('./insta.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.row.disc {
+    background: url('./disc.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}

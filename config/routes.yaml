@@ -1,0 +1,121 @@
+shokztv_social:
+  host: shokz.tv
+  path: /social-media
+  controller: App\Controller\BaseController::socialMedia
+
+shokztv_redirect:
+  host: shokz.tv
+  path: /
+  controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
+  defaults:
+    path: 'https://www.twitch.tv/shokztv'
+    permanent: true
+
+twitch_connect:
+  path: /connect
+  controller: App\Controller\SecurityController::connect
+
+twitch_connect_check:
+  path: /connect/check
+  controller: App\Controller\SecurityController::connectCheck
+
+api_landing:
+  path: /_api
+  controller: App\Controller\BaseController::welcomeAPI
+
+api_chatters_tracker:
+  path: /_api/tracker/chatters
+  controller: App\Controller\TrackerController::chatters
+  methods: POST
+
+api_chatters_message:
+  path: /_api/tracker/message
+  controller: App\Controller\TrackerController::message
+  methods: POST
+
+api_chatters_subscription:
+  path: /_api/tracker/subscription
+  controller: App\Controller\TrackerController::subscription
+  methods: POST
+
+verify_provably_fair:
+  path: /public/verify
+  controller: App\Controller\BaseController:verify
+
+overlay_feed:
+  path: /overlay/feedFriday
+  controller: App\Controller\OverlayController::feedFriday
+
+overlay_bet:
+  path: /overlay/bet
+  controller: App\Controller\OverlayController::bet
+
+panel_landing:
+  path: /{reactRouting}
+  controller: App\Controller\BaseController::panel
+  defaults:
+    reactRouting: null
+
+panel_viewer_history:
+  path: /panel/viewerHistory
+  controller: App\Controller\ViewerController:getViewersHistory
+
+bet_round_create:
+  path: /_api/bet/createRound
+  controller: App\Controller\BetController::createRound
+  methods: POST
+
+bet_round_update:
+  path: /_api/bet/updateRound
+  controller: App\Controller\BetController::updateStatus
+  methods: PATCH
+
+bet_register:
+  path: /_api/bet/register
+  controller: App\Controller\BetController::registerBet
+  methods: POST
+
+bet_toplist:
+  path: /_api/toplist
+  controller: App\Controller\BetController::getTopList
+  methods: GET
+
+bet_rounds:
+  path: /_api/rounds
+  controller: App\Controller\BetController::getRecentBets
+  methods: GET
+
+bet_draw_winner:
+  path: /_api/drawWinner
+  controller: App\Controller\BetController::randomWinner
+  methods: POST
+
+bet_fetch_participants:
+  path: /_api/participantList
+  controller: App\Controller\BetController::participants
+  methods: GET
+
+bet_verify_number:
+  path: /public/provablyVerify
+  controller: App\Controller\BetController::verifyWinner
+  methods: POST
+
+bet_season:
+  path: /_api/season
+  controller: App\Controller\BetController::seasonInfo
+  methods: GET
+
+bet_season_create:
+  path: /_api/season
+  controller: App\Controller\BetController::newSeason
+  methods: POST
+
+bet_round_change_winner:
+  path: /_api/roundChangeWinner/{betRoundId}
+  controller: App\Controller\BetController::changeRoundWinner
+  methods: PATCH
+
+bet_round_stats:
+  path: /_api/userstats/{username}
+  controller: App\Controller\BetController::userstats
+  methods: GET
