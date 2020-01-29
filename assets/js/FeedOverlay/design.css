@@ -1,0 +1,110 @@
+*, html, body {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.vote-overlayContainer {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: 250ms all ease-in-out;
+}
+
+.vote-overlayContainer.show {
+    opacity: 1;
+}
+
+.vote-info {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 13px;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.vote-progress {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-around;
+}
+.vote-a, .vote-b {
+    flex-grow: 0;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px;
+    font-size: 22px;
+}
+.vote-progress-bar {
+    display: block;
+    flex-grow: 1;
+    margin: 5px;
+    background-color: rgb(214, 0, 0);
+    border-radius: 10px;
+    position: relative;
+}
+
+.vote-perc-a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(6, 195, 0, 0.87);
+    transition: all 120ms ease-in-out;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.vote-perc-a:after {
+    content: ' ';
+    background-image: url('./LUL.gif');
+    position: absolute;
+    right: -18px;
+    top: -5px;
+    bottom: -2px;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.vote-standings {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 20px;
+    min-width: 130px;
+    justify-content: space-around;
+}
+
+.feed {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: 250ms all ease-in-out;
+    font-size: 50px;
+    background: #AA3333;
+    color: #FFF;
+    padding: 30px;
+    margin-top: -87px;
+}
+
+.feed.noFeed {
+    background: #39aa59;
+}
+
+.feed.show {
+    opacity: 1;
+}

@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ShokzTV Social Media{% endblock %}
+{% block bodyclass %}social{% endblock %}
+{% block body %}
+    {{ react_component('Social', {rendering: 'client_side'}) }}
+{% endblock %}

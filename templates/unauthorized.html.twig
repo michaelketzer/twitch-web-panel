@@ -1,0 +1,5 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ react_component('Authorization', {props: {isLogged: isLogged}, rendering: 'client_side'}) }}
+{% endblock %}
