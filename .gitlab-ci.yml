@@ -27,7 +27,7 @@ build_assets:
 
 build_vendors:
   stage: build
-  image: tetraweb/php
+  image: roadiz/php73-runner
   before_script:
     - apt-get update
     - apt-get install zip unzip
@@ -48,7 +48,7 @@ deploy:
       artifacts: true
     - job: build_vendors
       artifacts: true
-  image: node:13.1.0
+  image: node:13.5.0
   before_script:
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
     - eval $(ssh-agent -s)
