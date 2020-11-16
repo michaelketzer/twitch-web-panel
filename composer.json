@@ -8,7 +8,7 @@
         "ext-json": "*",
         "gamebetr/provable": "^1.0",
         "knpuniversity/oauth2-client-bundle": "^1.29",
-        "limenius/react-bundle": "^3.0",
+        "limenius/react-bundle": "^5.0",
         "nelmio/cors-bundle": "^1.5",
         "sensio/framework-extra-bundle": "^5.4",
         "sentry/sentry-symfony": "^3.0",
