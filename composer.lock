@@ -1258,24 +1258,28 @@
             "keywords": [
                 "reflection"
             ],
+            "abandoned": "roave/better-reflection",
             "time": "2018-06-14T14:45:07+00:00"
         },
         {
             "name": "gamebetr/provable",
-            "version": "1.0.0000",
+            "version": "1.0.0001",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gamebetr/provable.git",
-                "reference": "4b395e1766e180654110f40e5dfdc3e3af4251a9"
+                "reference": "fd3c23c8de2dfad9ba780cf1feb35ec2a8f45e08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gamebetr/provable/zipball/4b395e1766e180654110f40e5dfdc3e3af4251a9",
-                "reference": "4b395e1766e180654110f40e5dfdc3e3af4251a9",
+                "url": "https://api.github.com/repos/gamebetr/provable/zipball/fd3c23c8de2dfad9ba780cf1feb35ec2a8f45e08",
+                "reference": "fd3c23c8de2dfad9ba780cf1feb35ec2a8f45e08",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3"
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.2"
             },
             "type": "library",
             "autoload": {
@@ -1291,7 +1295,7 @@
                 }
             ],
             "description": "Package that provides the ability to create provably fair numbers and shuffles",
-            "time": "2019-09-16T21:07:57+00:00"
+            "time": "2020-06-16T23:43:16+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -5755,6 +5759,7 @@
                 "code",
                 "zf"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2019-08-31T14:14:34+00:00"
         },
         {
@@ -5822,6 +5827,7 @@
                 "psr",
                 "psr-7"
             ],
+            "abandoned": "laminas/laminas-diactoros",
             "time": "2019-11-13T19:16:13+00:00"
         },
         {
@@ -5876,6 +5882,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
         }
     ],
@@ -6416,5 +6423,6 @@
         "ext-iconv": "*",
         "ext-json": "*"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
